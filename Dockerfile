@@ -2,7 +2,7 @@ FROM amazonlinux:2016.09
 MAINTAINER Espen Skalozub
 
 # Install packages necessary to run EAP
-RUN yum update -y && yum install -y epel-release && yum -y install xmlstarlet saxon augeas bsdtar unzip && yum clean all
+RUN yum update -y && yum -y install shadow-utils xmlstarlet saxon augeas bsdtar unzip && yum clean all
 
 # Create a user and group used to launch processes
 # The user ID 1000 is the default for the first "regular" user on Fedora/RHEL,
